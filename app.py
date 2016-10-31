@@ -12,7 +12,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return mc.make_sentence()
+    dokata = mc.make_sentence()
+    return render_template('index.html', dokata=dokata)
 
 if __name__ == '__main__':
     app.run()
