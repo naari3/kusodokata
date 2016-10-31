@@ -49,9 +49,3 @@ class MarkovChainer(object):
             if words[-1] == "EOS":
                 break
         return "".join(sentence).replace("EOS","")
-
-with open("kuso.txt") as f:
-    text = f.read()
-    txts = text.split("\n")
-mc = MarkovChainer(3, txts)
-print(mc.make_sentence())
