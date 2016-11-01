@@ -3,8 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>変態糞土方</title>
+    <link rel="stylesheet" type="text/css" href="/static/index.css">
+    <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foggy/1.1.1/jquery.foggy.min.js"></script>
+    <script src="/static/index.js" charset="utf-8"></script>
   </head>
-  <body>
-    <p>{{dokata}}</p>
+  <body style="display:none;">
+    <div class="back"><div class="transparent"></div></div>
+    <div class="dokata">
+      {% for d in dokata%}
+        <p>{{d}}</p>
+      {% endfor %}
+    </div>
   </body>
 </html>
